@@ -21,6 +21,7 @@
 
 <body>
 
+
 <div class="x-body">
     <form class="layui-form" action="/updateStusion" method="post"  id="f_auto" accept-charset="UTF-8">
         <input type="hidden" value="${sessionScope.s.ss_id}" name="ss_id" id="ss_id"/>
