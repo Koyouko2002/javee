@@ -42,7 +42,7 @@
 </div>
 
 <div class="footer">
-    <span>@Copyright © 2019-2020 版权所有 </span>
+    <span>By Mycc 2124班 javaEE </span>
 </div>
 </body>
 </html>

@@ -38,7 +38,7 @@
 <div class="x-nav">
       <span class="layui-breadcrumb">
         <a href="">首页</a>
-        <a href="/findClass">班级信息</a>
+        <a href="/findClass">猪笼信息</a>
       </span>
     <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right" href="/findClass" title="刷新">
         <i class="layui-icon" style="line-height:30px">ဂ</i></a>
@@ -46,9 +46,9 @@
 <div class="x-body">
     <div class="layui-row">
         <form class="layui-form layui-col-md12 x-so" action="/findClass" >
-            <input class="layui-input" placeholder="请输入班级编号" name="c_classid" id="c_classid">
-            <input class="layui-input" placeholder="请输入班级名" name="c_classname" id="c_classname">
-            <input class="layui-input" placeholder="请输入辅导员姓名" name="c_counsellor" id="c_counsellor">
+            <input class="layui-input" placeholder="请输入猪笼编号" name="c_classid" id="c_classid">
+            <input class="layui-input" placeholder="请输入猪笼名" name="c_classname" id="c_classname">
+            <input class="layui-input" placeholder="请输入养殖员姓名" name="c_counsellor" id="c_counsellor">
 
             <input class="layui-input" type="hidden" name="pageIndex" value="1">
             <input class="layui-input" type="hidden" name="pageSize" value="3">
@@ -66,23 +66,23 @@
         <div class="layui-col-md10">
             <form class="layui-form" id="addEmployeeForm">
                 <div class="layui-form-item">
-                    <label class="layui-form-label">班级编号：</label>
+                    <label class="layui-form-label">猪笼编号：</label>
                     <div class="layui-input-block">
-                        <input type="text" name="c_classid" class="layui-input" placeholder="请输入班级编号">
+                        <input type="text" name="c_classid" class="layui-input" placeholder="请输入猪笼编号">
                     </div>
                 </div>
 
                 <div class="layui-form-item">
-                    <label class="layui-form-label">班级名：</label>
+                    <label class="layui-form-label">猪笼名：</label>
                     <div class="layui-input-block">
-                        <input type="text" lay-verify="required" name="c_classname"  class="layui-input" placeholder="请输入班级名">
+                        <input type="text" lay-verify="required" name="c_classname"  class="layui-input" placeholder="请输入猪笼名">
                     </div>
                 </div>
 
                 <div class="layui-form-item">
-                    <label class="layui-form-label">辅导员：</label>
+                    <label class="layui-form-label">养殖员：</label>
                     <div class="layui-input-block">
-                        <input type="text" name="c_counsellor" class="layui-input" placeholder="请输入辅导员姓名">
+                        <input type="text" name="c_counsellor" class="layui-input" placeholder="请输入养殖业姓名">
                     </div>
                 </div>
 
@@ -103,9 +103,9 @@
     <table class="layui-table">
         <thead>
             <th>ID</th>
-            <th>班级编号</th>
-            <th>班级名</th>
-            <th>辅导员</th>
+            <th>猪笼编号</th>
+            <th>猪笼名</th>
+            <th>养殖员</th>
             <th>操作</th>
         </thead>
         <tbody>
@@ -175,7 +175,7 @@
                     ]);
 
                     // 2. 数组头部新增表头
-                    dt.unshift({c_id: 'ID', c_classid: '班级编号', c_classname: '班级名', c_counsellor: '辅导员'});
+                    dt.unshift({c_id: 'ID', c_classid: '猪笼编号', c_classname: '猪笼名', c_counsellor: '养殖员'});
 
                     // 意思是：A列40px，B列60px(默认)，C列120px，D、E、F等均未定义
                     var colConf = excel.makeColConfig({
@@ -187,7 +187,7 @@
                     // 3. 执行导出函数，系统会弹出弹框
                     excel.exportExcel({
                         sheet1: dt
-                    }, '班级数据.xlsx', 'xlsx', {
+                    }, '猪笼数据.xlsx', 'xlsx', {
                         extend: {
                             '!cols': colConf
                         }
@@ -210,7 +210,7 @@
         $("#addStudnetBtn").click(function () {
             layer.open({
                 type:1,
-                title:"添加班级",
+                title:"添加猪笼",
                 skin:"myclass",
                 area:["50%"],
                 anim:2,

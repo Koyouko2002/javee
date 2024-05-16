@@ -37,7 +37,7 @@
 <div class="x-nav">
       <span class="layui-breadcrumb">
         <a href="">首页</a>
-        <a href="/findClassStudent">班级学生</a>
+        <a href="/findClassStudent">猪笼小猪</a>
 
       </span>
     <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right" href="/findClassStudent" title="刷新">
@@ -46,8 +46,8 @@
 <div class="x-body">
     <div class="layui-row">
         <form class="layui-form layui-col-md12 x-so" action="/findClassStudent" >
-            <input class="layui-input" placeholder="请输入班级编号" name="c_classid" id="c_classid">
-            <input class="layui-input" placeholder="请输入班级名" name="c_classname" id="c_classname">
+            <input class="layui-input" placeholder="请输入猪笼编号" name="c_classid" id="c_classid">
+            <input class="layui-input" placeholder="请输入猪笼名" name="c_classname" id="c_classname">
 
             <button class="layui-btn" lay-submit lay-filter="search"><i class="layui-icon">&#xe615;</i></button>
         </form>
@@ -57,13 +57,13 @@
     <table class="layui-table" id="tb">
         <thead>
         <tr>
-            <th>班级编号</th>
-            <th>班级名</th>
-            <th>辅导员</th>
-            <th>学生学号</th>
-            <th>学生姓名</th>
-            <th>电话</th>
-            <th>宿舍编号</th>
+            <th>猪笼编号</th>
+            <th>猪笼名</th>
+            <th>养殖员</th>
+            <th>小猪编号</th>
+            <th>小猪小猪昵称</th>
+            <th>检疫编号</th>
+            <th>猪舍编号</th>
         </thead>
         <tbody>
 

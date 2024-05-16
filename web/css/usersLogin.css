@@ -20,11 +20,12 @@
 .panel{
     width: 350px;
     height: 420px;
-    position: relative;
-    left: 800px;
-    top: 60px;
+    position: absolute;
+    left: 1400px;
+    top: 200px;
     background-color: #FFFFFF;
     border: 1px solid #dff0d8;
+    opacity:0.9;
 }
 
 .top{

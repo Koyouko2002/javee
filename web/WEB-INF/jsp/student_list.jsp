@@ -38,7 +38,7 @@
 <div class="x-nav">
       <span class="layui-breadcrumb">
         <a href="">首页</a>
-        <a href="/findStudent">学生信息</a>
+        <a href="/findStudent">小猪信息</a>
       </span>
     <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right" href="/findStudent" title="刷新">
         <i class="layui-icon" style="line-height:30px">ဂ</i></a>
@@ -46,10 +46,10 @@
 <div class="x-body">
     <div class="layui-row">
         <form class="layui-form layui-col-md12 x-so" action="/findStudent" >
-            <input class="layui-input" placeholder="请输入姓名" name="s_name" id="s_name">
-            <input class="layui-input" placeholder="请输入学号" name="s_studentid" id="s_studentid">
-            <input class="layui-input" placeholder="请输入班级编号" name="s_classid" id="s_classid">
-            <input class="layui-input" placeholder="请输入班级名" name="s_classname" id="s_classname">
+            <input class="layui-input" placeholder="请输入小猪昵称" name="s_name" id="s_name">
+            <input class="layui-input" placeholder="请输入编号" name="s_studentid" id="s_studentid">
+            <input class="layui-input" placeholder="请输入猪笼编号" name="s_classid" id="s_classid">
+            <input class="layui-input" placeholder="请输入猪笼名" name="s_classname" id="s_classname">
 
             <input class="layui-input" type="hidden" name="pageIndex" value="1">
             <input class="layui-input" type="hidden" name="pageSize" value="3">
@@ -67,24 +67,24 @@
         <div class="layui-col-md10">
             <form class="layui-form" id="addEmployeeForm">
                 <div class="layui-form-item">
-                    <label class="layui-form-label">学号：</label>
+                    <label class="layui-form-label">编号：</label>
                     <div class="layui-input-block">
-                        <input type="text" lay-verify="required" name="s_studentid"   class="layui-input" placeholder="请输入学号">
+                        <input type="text" lay-verify="required" name="s_studentid"   class="layui-input" placeholder="请输入编号">
                     </div>
                 </div>
 
                 <div class="layui-form-item">
-                    <label class="layui-form-label">姓名：</label>
+                    <label class="layui-form-label">小猪昵称：</label>
                     <div class="layui-input-block">
-                        <input type="text" lay-verify="required" name="s_name"  class="layui-input" placeholder="请输入姓名">
+                        <input type="text" lay-verify="required" name="s_name"  class="layui-input" placeholder="请输入小猪昵称">
                     </div>
                 </div>
 
                 <div class="layui-form-item">
                     <label class="layui-form-label">性别</label>
                     <div class="layui-input-block">
-                        <input type="radio" name="s_sex" value="男" title="男" checked="">
-                        <input type="radio" name="s_sex" value="女" title="女">
+                        <input type="radio" name="s_sex" value="雄" title="雄" checked="">
+                        <input type="radio" name="s_sex" value="雌" title="雌">
                         <%--<input type="text" name="s_sex" class="layui-input" id="s_sex" placeholder="请输入性别">--%>
                     </div>
                 </div>
@@ -97,30 +97,30 @@
                 </div>
 
                 <div class="layui-form-item">
-                    <label class="layui-form-label">电话：</label>
+                    <label class="layui-form-label">检疫编号：</label>
                     <div class="layui-input-block">
-                        <input type="text"  name="s_phone"  class="layui-input" placeholder="请输入电话">
+                        <input type="text"  name="s_phone"  class="layui-input" placeholder="请输入检疫编号">
                     </div>
                 </div>
 
                 <div class="layui-form-item">
-                    <label class="layui-form-label">班级编号：</label>
+                    <label class="layui-form-label">猪笼编号：</label>
                     <div class="layui-input-block">
-                        <input type="text" name="s_classid" class="layui-input" placeholder="请输入班级编号">
+                        <input type="text" name="s_classid" class="layui-input" placeholder="请输入猪笼编号">
                     </div>
                 </div>
 
                 <div class="layui-form-item">
-                    <label class="layui-form-label">班级名：</label>
+                    <label class="layui-form-label">猪笼名：</label>
                     <div class="layui-input-block">
-                        <input type="text" name="s_classname" class="layui-input" placeholder="请输入班级名">
+                        <input type="text" name="s_classname" class="layui-input" placeholder="请输入猪笼名">
                     </div>
                 </div>
 
                 <div class="layui-form-item">
-                    <label class="layui-form-label">寝室编号：</label>
+                    <label class="layui-form-label">猪圈编号：</label>
                     <div class="layui-input-block">
-                        <input type="text" name="s_dormitoryid"  class="layui-input" placeholder="请输入寝室编号">
+                        <input type="text" name="s_dormitoryid"  class="layui-input" placeholder="请输入猪圈编号">
                     </div>
                 </div>
 
@@ -143,24 +143,24 @@
             <form class="layui-form" id="addUpdatForm" >
                 <input value="${sessionScope.sid}" type="text"  name="s_id" id="edit_id"/>
                 <div class="layui-form-item">
-                    <label class="layui-form-label">学号：</label>
+                    <label class="layui-form-label">编号：</label>
                     <div class="layui-input-block">
-                        <input type="text"  name="s_studentid" id="edit_studentid"  value=""  class="layui-input" placeholder="请输入学号">
+                        <input type="text"  name="s_studentid" id="edit_studentid"  value=""  class="layui-input" placeholder="请输入编号">
                     </div>
                 </div>
 
                 <div class="layui-form-item">
-                    <label class="layui-form-label">姓名：</label>
+                    <label class="layui-form-label">小猪昵称：</label>
                     <div class="layui-input-block">
-                        <input type="text"  name="s_name" id="edit_names"  value="" class="layui-input" placeholder="请输入姓名">
+                        <input type="text"  name="s_name" id="edit_names"  value="" class="layui-input" placeholder="请输入小猪昵称">
                     </div>
                 </div>
 
                 <div class="layui-form-item">
                     <label class="layui-form-label">性别</label>
                     <div class="layui-input-block">
-                        <input type="radio" name="s_sex" id="edit_sex" value="男" title="男" checked="">
-                        <input type="radio" name="s_sex" id="edit_sex" value="女" title="女">
+                        <input type="radio" name="s_sex" id="edit_sex" value="雄" title="雄" checked="">
+                        <input type="radio" name="s_sex" id="edit_sex" value="雌" title="雌">
                         <%--<input type="text" name="s_sex" class="layui-input" id="s_sex" placeholder="请输入性别">--%>
                     </div>
                 </div>
@@ -173,30 +173,30 @@
                 </div>
 
                 <div class="layui-form-item">
-                    <label class="layui-form-label">电话：</label>
+                    <label class="layui-form-label">检疫编号：</label>
                     <div class="layui-input-block">
-                        <input type="text"  name="s_phone" id="edit_phone" value="" class="layui-input" placeholder="请输入电话">
+                        <input type="text"  name="s_phone" id="edit_phone" value="" class="layui-input" placeholder="请输入检疫编号">
                     </div>
                 </div>
 
                 <div class="layui-form-item">
-                    <label class="layui-form-label">班级编号：</label>
+                    <label class="layui-form-label">猪笼编号：</label>
                     <div class="layui-input-block">
-                        <input type="text" name="s_classid" id="edit_classids" value="" class="layui-input" placeholder="请输入班级编号">
+                        <input type="text" name="s_classid" id="edit_classids" value="" class="layui-input" placeholder="请输入猪笼编号">
                     </div>
                 </div>
 
                 <div class="layui-form-item">
-                    <label class="layui-form-label">班级名：</label>
+                    <label class="layui-form-label">猪笼名：</label>
                     <div class="layui-input-block">
-                        <input type="text" name="s_classname" id="edit_classname" value="" class="layui-input" placeholder="请输入班级名">
+                        <input type="text" name="s_classname" id="edit_classname" value="" class="layui-input" placeholder="请输入猪笼名">
                     </div>
                 </div>
 
                 <div class="layui-form-item">
-                    <label class="layui-form-label">宿舍编号：</label>
+                    <label class="layui-form-label">猪舍编号：</label>
                     <div class="layui-input-block">
-                        <input type="text" name="s_dormitoryid"  id="edit_dormitoryids" value="" class="layui-input" placeholder="请输入宿舍编号">
+                        <input type="text" name="s_dormitoryid"  id="edit_dormitoryids" value="" class="layui-input" placeholder="请输入猪舍编号">
                     </div>
                 </div>
 
@@ -219,14 +219,14 @@
                 <%--<div class="layui-unselect header layui-form-checkbox" lay-skin="primary"><i class="layui-icon">&#xe605;</i></div>--%>
             <%--</th>--%>
             <th>ID</th>
-            <th>学号</th>
-            <th>姓名</th>
+            <th>编号</th>
+            <th>小猪昵称</th>
             <th>性别</th>
             <th>年龄</th>
-            <th>电话</th>
-            <th>班级编号</th>
-            <th>班级名</th>
-            <th>寝室编号</th>
+            <th>检疫编号</th>
+            <th>猪笼编号</th>
+            <th>猪笼名</th>
+            <th>猪圈编号</th>
             <th>操作</th>
         </thead>
         <tbody>
@@ -309,7 +309,7 @@
                     ]);
 
                     // 2. 数组头部新增表头
-                    dt.unshift({s_id: 'ID', s_studentid: '学号', s_name: '姓名', s_sex: '性别', s_age: '年龄', s_phone: '电话', s_classid: '班级编号', s_classname: '班级名', s_dormitoryid: '寝室编号'});
+                    dt.unshift({s_id: 'ID', s_studentid: '编号', s_name: '小猪昵称', s_sex: '性别', s_age: '年龄', s_phone: '检疫编号', s_classid: '猪笼编号', s_classname: '猪笼名', s_dormitoryid: '猪圈编号'});
 
                     // 意思是：A列40px，B列60px(默认)，C列120px，D、E、F等均未定义
                     var colConf = excel.makeColConfig({
@@ -322,7 +322,7 @@
                     // 3. 执行导出函数，系统会弹出弹框
                     excel.exportExcel({
                         sheet1: dt
-                    }, '学生数据.xlsx', 'xlsx', {
+                    }, '小猪数据.xlsx', 'xlsx', {
                         extend: {
                             '!cols': colConf
                         }
@@ -345,7 +345,7 @@
         $("#addStudnetBtn").click(function () {
             layer.open({
                 type:1,
-                title:"添加学生",
+                title:"添加小猪",
                 skin:"myclass",
                 area:["50%"],
                 anim:2,

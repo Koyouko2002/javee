@@ -46,7 +46,7 @@
 <div class="x-body">
     <div class="layui-row">
         <form class="layui-form layui-col-md12 x-so" action="/findDormitoryStudent" >
-            <input class="layui-input" placeholder="请输入宿舍编号" name="s_dormitoryid" id="s_dormitoryid">
+            <input class="layui-input" placeholder="请输入猪舍编号" name="s_dormitoryid" id="s_dormitoryid">
 
             <button class="layui-btn"  lay-submit="" lay-filter="sreach"><i class="layui-icon">&#xe615;</i></button>
         </form>
@@ -58,9 +58,9 @@
         <div class="layui-col-md10">
             <form class="layui-form" id="addEmployeeForm">
                 <div class="layui-form-item">
-                    <label class="layui-form-label">宿舍编号：</label>
+                    <label class="layui-form-label">猪舍编号：</label>
                     <div class="layui-input-block">
-                        <input type="text" name="s_dormitoryid" class="layui-input" placeholder="请输入宿舍编号">
+                        <input type="text" name="s_dormitoryid" class="layui-input" placeholder="请输入猪舍编号">
                     </div>
                 </div>
 
@@ -102,13 +102,13 @@
             <%--<th>--%>
                 <%--<div class="layui-unselect header layui-form-checkbox" lay-skin="primary"><i class="layui-icon">&#xe605;</i></div>--%>
             <%--</th>--%>
-            <th>宿舍编号</th>
-            <th>宿舍楼</th>
+            <th>猪舍编号</th>
+            <th>猪舍楼</th>
             <th>已用床位</th>
-            <th>学生姓名</th>
-            <th>电话</th>
-            <th>班级编号</th>
-                <th>班级名</th>
+            <th>小猪昵称</th>
+            <th>检疫编号</th>
+            <th>猪笼编号</th>
+                <th>猪笼名</th>
 
         </thead>
         <tbody>

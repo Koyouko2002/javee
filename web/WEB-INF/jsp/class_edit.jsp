@@ -26,7 +26,7 @@
         <input type="hidden" value="${sessionScope.c.c_id}" name="c_id" id="c_id"/>
         <div class="layui-form-item">
             <label for="c_classid" class="layui-form-label">
-                <span class="">班级编号</span>
+                <span class="">猪笼编号</span>
             </label>
             <div class="layui-input-inline">
                 <input type="text" id="c_classid" name="c_classid"
@@ -36,7 +36,7 @@
 
         <div class="layui-form-item">
             <label for="c_classname" class="layui-form-label">
-                <span class="">班级名</span>
+                <span class="">猪笼名</span>
             </label>
             <div class="layui-input-inline">
                 <input type="text" id="c_classname" name="c_classname"
@@ -46,7 +46,7 @@
 
         <div class="layui-form-item">
             <label for="c_counsellor" class="layui-form-label">
-                <span class="">辅导员姓名</span>
+                <span class="">养殖员姓名</span>
             </label>
             <div class="layui-input-inline">
                 <input type="text" id="c_counsellor" name="c_counsellor"

@@ -27,7 +27,7 @@
         <input type="hidden" value="${sessionScope.d.g_id}" name="g_id" id="g_id"/>
         <div class="layui-form-item">
             <label for="s_studentid" class="layui-form-label">
-                <span class="">学号</span>
+                <span class="">编号</span>
             </label>
             <div class="layui-input-inline">
                 <input type="text" id="s_studentid" name="s_studentid"
@@ -37,7 +37,7 @@
 
         <div class="layui-form-item">
             <label for="s_name" class="layui-form-label">
-                <span class="">姓名</span>
+                <span class="">小猪昵称</span>
             </label>
             <div class="layui-input-inline">
                 <input type="text" id="s_name" name="s_name"
@@ -57,7 +57,7 @@
 
         <div class="layui-form-item">
             <label for="s_classid" class="layui-form-label">
-                <span class="">班级编号</span>
+                <span class="">猪笼编号</span>
             </label>
             <div class="layui-input-inline">
                 <input type="text" id="s_classid" name="s_classid"
@@ -67,7 +67,7 @@
 
         <div class="layui-form-item">
             <label for="s_dormitoryid" class="layui-form-label">
-                <span class="">寝室编号</span>
+                <span class="">猪圈编号</span>
             </label>
             <div class="layui-input-inline">
                 <input type="text" id="s_dormitoryid" name="s_dormitoryid"

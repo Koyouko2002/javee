@@ -39,7 +39,7 @@
 <div class="x-nav">
       <span class="layui-breadcrumb">
         <a href="">首页</a>
-        <a href="/findDormClean">宿舍卫生</a>
+        <a href="/findDormClean">猪舍卫生</a>
 
       </span>
     <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right" href="/findDormClean" title="刷新">
@@ -48,8 +48,8 @@
 <div class="x-body">
     <div class="layui-row">
         <form class="layui-form layui-col-md12 x-so" action="/findDormClean" >
-            <input class="layui-input" placeholder="请输入宿舍编号" name="d_id" id="d_id">
-            <input class="layui-input" placeholder="请输入宿舍楼" name="d_dormbuilding" id="d_dormbuilding">
+            <input class="layui-input" placeholder="请输入猪舍编号" name="d_id" id="d_id">
+            <input class="layui-input" placeholder="请输入猪舍楼" name="d_dormbuilding" id="d_dormbuilding">
 
             <input class="layui-input" type="hidden" name="pageIndex" value="1">
             <input class="layui-input" type="hidden" name="pageSize" value="3">
@@ -67,21 +67,21 @@
         <div class="layui-col-md10">
             <form class="layui-form" id="addEmployeeForm">
                 <div class="layui-form-item">
-                    <label class="layui-form-label">宿舍编号：</label>
+                    <label class="layui-form-label">猪舍编号：</label>
                     <div class="layui-input-block">
-                        <input type="text" name="d_id" class="layui-input" placeholder="请输入宿舍编号">
+                        <input type="text" name="d_id" class="layui-input" placeholder="请输入猪舍编号">
                     </div>
                 </div>
 
                 <div class="layui-form-item">
-                    <label class="layui-form-label">宿舍楼：</label>
+                    <label class="layui-form-label">猪舍楼：</label>
                     <div class="layui-input-block">
-                        <input type="text" name="d_dormbuilding" class="layui-input" placeholder="请输入宿舍楼">
+                        <input type="text" name="d_dormbuilding" class="layui-input" placeholder="请输入猪舍楼">
                     </div>
                 </div>
 
                 <div class="layui-form-item">
-                    <label class="layui-form-label">宿舍卫生：</label>
+                    <label class="layui-form-label">猪舍卫生：</label>
                     <div class="layui-input-block">
                         <input type="text" name="d_grade" class="layui-input" placeholder="请输入卫生打分">
                     </div>
@@ -106,9 +106,9 @@
                 <%--<div class="layui-unselect header layui-form-checkbox" lay-skin="primary"><i class="layui-icon">&#xe605;</i></div>--%>
             <%--</th>--%>
             <th>ID</th>
-            <th>宿舍编号</th>
-            <th>宿舍楼</th>
-            <th>宿舍卫生</th>
+            <th>猪舍编号</th>
+            <th>猪舍楼</th>
+            <th>猪舍卫生</th>
             <th>创建日期</th>
             <th>更新日期</th>
             <th>操作</th>
@@ -186,7 +186,7 @@
                         ]);
 
                         // 2. 数组头部新增表头
-                        dt.unshift({g_id: 'ID', d_id: '宿舍编号', d_dormbuilding: '宿舍楼', d_grade: '宿舍卫生', create_time: '创建日期', update_time: '更新日期'});
+                        dt.unshift({g_id: 'ID', d_id: '猪舍编号', d_dormbuilding: '猪舍楼', d_grade: '猪舍卫生', create_time: '创建日期', update_time: '更新日期'});
 
                         // 意思是：A列40px，B列60px(默认)，C列120px，D、E、F等均未定义
                         var colConf = excel.makeColConfig({
@@ -198,7 +198,7 @@
                         // 3. 执行导出函数，系统会弹出弹框
                         excel.exportExcel({
                             sheet1: dt
-                        }, '宿舍卫生数据.xlsx', 'xlsx', {
+                        }, '猪舍卫生数据.xlsx', 'xlsx', {
                             extend: {
                                 '!cols': colConf
                             }
@@ -221,7 +221,7 @@
             $("#addStudnetBtn").click(function () {
                 layer.open({
                     type:1,
-                    title:"添加班级",
+                    title:"添加猪笼",
                     skin:"myclass",
                     area:["50%"],
                     anim:2,

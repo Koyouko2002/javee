@@ -26,7 +26,7 @@
         <input type="hidden" value="${sessionScope.d.d_id}" name="d_id" id="d_id"/>
         <div class="layui-form-item">
             <label for="s_dormitoryid" class="layui-form-label">
-                <span class="">宿舍编号</span>
+                <span class="">猪舍编号</span>
             </label>
             <div class="layui-input-inline">
                 <input type="text" id="s_dormitoryid" name="s_dormitoryid"
@@ -36,7 +36,7 @@
 
         <div class="layui-form-item">
             <label for="d_dormbuilding" class="layui-form-label">
-                <span class="">宿舍楼</span>
+                <span class="">猪舍楼</span>
             </label>
             <div class="layui-input-inline">
                 <input type="text" id="d_dormbuilding" name="d_dormbuilding"

@@ -26,7 +26,7 @@
         <input type="hidden" value="${sessionScope.s.s_id}" name="s_id" id="s_id"/>
         <div class="layui-form-item">
             <label for="s_studentid" class="layui-form-label">
-                <span class="f_sp">学号</span>
+                <span class="f_sp">编号</span>
             </label>
             <div class="layui-input-inline">
                 <input type="text" id="s_studentid" name="s_studentid"
@@ -36,7 +36,7 @@
 
         <div class="layui-form-item">
             <label for="s_name" class="layui-form-label">
-                <span class="f_sp">姓名</span>
+                <span class="f_sp">小猪昵称</span>
             </label>
             <div class="layui-input-inline">
                 <input type="text" id="s_name" name="s_name"
@@ -49,8 +49,8 @@
                 <span class="f_sp">性别</span>
             </label>
             <div class="layui-input-inline" id="s_sex">
-                <input type="radio" name="s_sex" id="s_male" value="男" title="男" checked="">
-                <input type="radio" name="s_sex" id="s_female" value="女" title="女">
+                <input type="radio" name="s_sex" id="s_male" value="雄" title="雄" checked="">
+                <input type="radio" name="s_sex" id="s_female" value="雌" title="雌">
             </div>
         </div>
 
@@ -66,7 +66,7 @@
 
         <div class="layui-form-item">
             <label for="s_phone" class="layui-form-label">
-                <span class="f_sp">电话</span>
+                <span class="f_sp">检疫编号</span>
             </label>
             <div class="layui-input-inline">
                 <input type="text" id="s_phone" name="s_phone"
@@ -76,7 +76,7 @@
 
         <div class="layui-form-item">
             <label for="s_classid" class="layui-form-label">
-                <span class="">*</span>班级编号
+                <span class="">*</span>猪笼编号
             </label>
             <div class="layui-input-inline">
                 <input type="text" id="s_classid" name="s_classid"
@@ -86,7 +86,7 @@
 
         <div class="layui-form-item">
             <label for="s_classid" class="layui-form-label">
-                <span class="">*</span>班级名
+                <span class="">*</span>猪笼名
             </label>
             <div class="layui-input-inline">
                 <input type="text" id="s_classname" name="s_classname"
@@ -96,7 +96,7 @@
 
         <div class="layui-form-item">
             <label for="s_dormitoryid" class="layui-form-label">
-                <span class="">*</span>寝室编号
+                <span class="">*</span>猪圈编号
             </label>
             <div class="layui-input-inline">
                 <input type="text" id="s_dormitoryid" name="s_dormitoryid"

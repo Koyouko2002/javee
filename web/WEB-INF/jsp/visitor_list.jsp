@@ -81,16 +81,16 @@
                 </div>
 
                 <div class="layui-form-item">
-                    <label class="layui-form-label">访问宿舍编号：</label>
+                    <label class="layui-form-label">访问猪舍编号：</label>
                     <div class="layui-input-block">
-                        <input type="text" name="v_dormitoryid" class="layui-input" placeholder="请输入宿舍编号">
+                        <input type="text" name="v_dormitoryid" class="layui-input" placeholder="请输入猪舍编号">
                     </div>
                 </div>
 
                 <div class="layui-form-item">
-                    <label class="layui-form-label">访问宿舍楼：</label>
+                    <label class="layui-form-label">访问猪舍楼：</label>
                     <div class="layui-input-block">
-                        <input type="text" name="v_dormbuilding"  class="layui-input" placeholder="请输入宿舍楼">
+                        <input type="text" name="v_dormbuilding"  class="layui-input" placeholder="请输入猪舍楼">
                     </div>
                 </div>
 
@@ -112,13 +112,13 @@
             <%--<div class="layui-unselect header layui-form-checkbox" lay-skin="primary"><i class="layui-icon">&#xe605;</i></div>--%>
             <%--</th>--%>
             <th>ID</th>
-            <%--<th>学号</th>--%>
+            <%--<th>编号</th>--%>
             <th>访客姓名</th>
             <%--<th>性别</th>--%>
             <%--<th>年龄</th>--%>
             <th>访客电话</th>
-            <th>访问宿舍编号</th>
-            <th>访问宿舍楼</th>
+            <th>访问猪舍编号</th>
+            <th>访问猪舍楼</th>
             <th>访问时间</th>
         </thead>
         <tbody>
@@ -184,7 +184,7 @@
                     ]);
 
                     // 2. 数组头部新增表头
-                    dt.unshift({v_id: 'ID', v_name: '访客姓名', v_phone: '访客电话', v_dormitoryid: '访问宿舍编号', v_dormbuilding: '访问宿舍楼', create_time: '访问时间'});
+                    dt.unshift({v_id: 'ID', v_name: '访客姓名', v_phone: '访客电话', v_dormitoryid: '访问猪舍编号', v_dormbuilding: '访问猪舍楼', create_time: '访问时间'});
 
                     // 意思是：A列40px，B列60px(默认)，C列120px，D、E、F等均未定义
                     var colConf = excel.makeColConfig({

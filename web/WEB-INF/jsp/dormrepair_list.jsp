@@ -39,7 +39,7 @@
 <div class="x-nav">
       <span class="layui-breadcrumb">
         <a href="">首页</a>
-        <a href="/findDormRepair">维修信息</a>
+        <a href="/findDormRepair">投喂信息</a>
 
       </span>
     <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right" href="/findDormRepair" title="刷新">
@@ -48,8 +48,8 @@
 <div class="x-body">
     <div class="layui-row">
         <form class="layui-form layui-col-md12 x-so" action="/findDormRepair" >
-            <input class="layui-input" placeholder="请输入宿舍编号" name="d_id" id="d_id">
-            <input class="layui-input" placeholder="请输入宿舍楼" name="d_dormbuilding" id="d_dormbuilding">
+            <input class="layui-input" placeholder="请输入猪舍编号" name="d_id" id="d_id">
+            <input class="layui-input" placeholder="请输入猪舍楼" name="d_dormbuilding" id="d_dormbuilding">
 
             <input class="layui-input" type="hidden" name="pageIndex" value="1">
             <input class="layui-input" type="hidden" name="pageSize" value="3">
@@ -67,30 +67,30 @@
         <div class="layui-col-md10">
             <form class="layui-form" id="addEmployeeForm">
                 <div class="layui-form-item">
-                    <label class="layui-form-label">宿舍编号：</label>
+                    <label class="layui-form-label">猪舍编号：</label>
                     <div class="layui-input-block">
-                        <input type="text" name="d_id" class="layui-input" placeholder="请输入宿舍编号">
+                        <input type="text" name="d_id" class="layui-input" placeholder="请输入猪舍编号">
                     </div>
                 </div>
 
                 <div class="layui-form-item">
-                    <label class="layui-form-label">宿舍楼：</label>
+                    <label class="layui-form-label">猪舍楼：</label>
                     <div class="layui-input-block">
-                        <input type="text" name="d_dormbuilding" class="layui-input" placeholder="请输入宿舍楼">
+                        <input type="text" name="d_dormbuilding" class="layui-input" placeholder="请输入猪舍楼">
                     </div>
                 </div>
 
                 <div class="layui-form-item">
-                    <label class="layui-form-label">维修人员：</label>
+                    <label class="layui-form-label">投喂人员：</label>
                     <div class="layui-input-block">
-                        <input type="text" lay-verify="required" name="r_name"  class="layui-input" placeholder="请输入维修人员">
+                        <input type="text" lay-verify="required" name="r_name"  class="layui-input" placeholder="请输入投喂人员">
                     </div>
                 </div>
 
                 <div class="layui-form-item">
-                    <label class="layui-form-label">报修事由：</label>
+                    <label class="layui-form-label">投喂饲料：</label>
                     <div class="layui-input-block">
-                        <input type="text" name="reason" class="layui-input" placeholder="请输入报修事由">
+                        <input type="text" name="reason" class="layui-input" placeholder="请输入投喂饲料">
                     </div>
                 </div>
 
@@ -113,11 +113,11 @@
                 <%--<div class="layui-unselect header layui-form-checkbox" lay-skin="primary"><i class="layui-icon">&#xe605;</i></div>--%>
             <%--</th>--%>
             <th>ID</th>
-            <th>宿舍编号</th>
-            <th>宿舍楼</th>
-            <th>维修人员</th>
-            <th>报修事由</th>
-            <th>报修时间</th>
+            <th>猪舍编号</th>
+            <th>猪舍楼</th>
+            <th>投喂人员</th>
+            <th>投喂饲料</th>
+            <th>投喂时间</th>
             <th>更新时间</th>
             <th>操作</th>
         </thead>
@@ -193,7 +193,7 @@
                         ]);
 
                         // 2. 数组头部新增表头
-                        dt.unshift({r_id: 'ID', d_id: '宿舍编号', d_dormbuilding: '宿舍楼', r_name: '维修人员', reason: '报修事由', create_time: '报修时间', update_time: '更新时间'});
+                        dt.unshift({r_id: 'ID', d_id: '猪舍编号', d_dormbuilding: '猪舍楼', r_name: '投喂人员', reason: '投喂饲料', create_time: '投喂时间', update_time: '更新时间'});
 
                         // 意思是：A列40px，B列60px(默认)，C列120px，D、E、F等均未定义
                         var colConf = excel.makeColConfig({
@@ -205,7 +205,7 @@
                         // 3. 执行导出函数，系统会弹出弹框
                         excel.exportExcel({
                             sheet1: dt
-                        }, '维修登记数据.xlsx', 'xlsx', {
+                        }, '投喂登记数据.xlsx', 'xlsx', {
                             extend: {
                                 '!cols': colConf
                             }
@@ -228,7 +228,7 @@
             $("#addStudnetBtn").click(function () {
                 layer.open({
                     type:1,
-                    title:"添加班级",
+                    title:"添加猪笼",
                     skin:"myclass",
                     area:["50%"],
                     anim:2,

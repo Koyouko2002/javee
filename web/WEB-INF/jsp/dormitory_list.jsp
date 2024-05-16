@@ -38,7 +38,7 @@
 <div class="x-nav">
       <span class="layui-breadcrumb">
         <a href="">首页</a>
-        <a href="/findDormitory">宿舍信息</a>
+        <a href="/findDormitory">猪舍信息</a>
 
       </span>
     <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right" href="/findDormitory" title="刷新">
@@ -47,8 +47,8 @@
 <div class="x-body">
     <div class="layui-row">
         <form class="layui-form layui-col-md12 x-so" action="/findDormitory" >
-            <input class="layui-input" placeholder="请输入宿舍编号" name="s_dormitoryid" id="s_dormitoryid">
-            <input class="layui-input" placeholder="请输入宿舍楼" name="d_dormbuilding" id="d_dormbuilding">
+            <input class="layui-input" placeholder="请输入猪舍编号" name="s_dormitoryid" id="s_dormitoryid">
+            <input class="layui-input" placeholder="请输入猪舍楼" name="d_dormbuilding" id="d_dormbuilding">
             <input class="layui-input" placeholder="请输入管理员姓名" name="a_name" id="a_name">
 
             <input class="layui-input" type="hidden" name="pageIndex" value="1">
@@ -67,16 +67,16 @@
         <div class="layui-col-md10">
             <form class="layui-form" id="addEmployeeForm">
                 <div class="layui-form-item">
-                    <label class="layui-form-label">宿舍编号：</label>
+                    <label class="layui-form-label">猪舍编号：</label>
                     <div class="layui-input-block">
-                        <input type="text" name="s_dormitoryid" class="layui-input" placeholder="请输入宿舍编号">
+                        <input type="text" name="s_dormitoryid" class="layui-input" placeholder="请输入猪舍编号">
                     </div>
                 </div>
 
                 <div class="layui-form-item">
-                    <label class="layui-form-label">宿舍楼：</label>
+                    <label class="layui-form-label">猪舍楼：</label>
                     <div class="layui-input-block">
-                        <input type="text" name="d_dormbuilding" class="layui-input" placeholder="请输入宿舍楼">
+                        <input type="text" name="d_dormbuilding" class="layui-input" placeholder="请输入猪舍楼">
                     </div>
                 </div>
 
@@ -117,8 +117,8 @@
         <thead>
         <tr>
             <th>ID</th>
-            <th>宿舍编号</th>
-            <th>宿舍楼</th>
+            <th>猪舍编号</th>
+            <th>猪舍楼</th>
             <th>床位总数</th>
             <th>已用床位</th>
             <th>管理员</th>
@@ -197,7 +197,7 @@
                     ]);
 
                     // 2. 数组头部新增表头
-                    dt.unshift({d_id: 'ID', s_dormitoryid: '宿舍编号', d_dormbuilding: '宿舍楼', d_bedtotal: '床位总数', d_bed: '医用床位', a_name: '管理员'});
+                    dt.unshift({d_id: 'ID', s_dormitoryid: '猪舍编号', d_dormbuilding: '猪舍楼', d_bedtotal: '床位总数', d_bed: '医用床位', a_name: '管理员'});
 
                     // 意思是：A列40px，B列60px(默认)，C列120px，D、E、F等均未定义
                     var colConf = excel.makeColConfig({
@@ -209,7 +209,7 @@
                     // 3. 执行导出函数，系统会弹出弹框
                     excel.exportExcel({
                         sheet1: dt
-                    }, '宿舍数据.xlsx', 'xlsx', {
+                    }, '猪舍数据.xlsx', 'xlsx', {
                         extend: {
                             '!cols': colConf
                         }
@@ -232,7 +232,7 @@
         $("#addStudnetBtn").click(function () {
             layer.open({
                 type:1,
-                title:"添加宿舍",
+                title:"添加猪舍",
                 skin:"myclass",
                 area:["50%"],
                 anim:2,

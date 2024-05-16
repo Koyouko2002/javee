@@ -39,7 +39,7 @@
 <div class="x-nav">
       <span class="layui-breadcrumb">
         <a href="">首页</a>
-        <a href="/findDormClean">学生卫生</a>
+        <a href="/findDormClean">卫生情况</a>
 
       </span>
     <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right" href="/findStudentClean" title="刷新">
@@ -48,9 +48,9 @@
 <div class="x-body">
     <div class="layui-row">
         <form class="layui-form layui-col-md12 x-so" action="/findStudentClean" >
-            <input class="layui-input" placeholder="请输入学号" name="s_studentid" id="s_studentid">
-            <input class="layui-input" placeholder="请输入姓名" name="s_name" id="s_name">
-            <input class="layui-input" placeholder="请输入寝室编号" name="s_dormitoryid" id="s_dormitoryid">
+            <input class="layui-input" placeholder="请输入编号" name="s_studentid" id="s_studentid">
+            <input class="layui-input" placeholder="请输入小猪昵称" name="s_name" id="s_name">
+            <input class="layui-input" placeholder="请输入猪圈编号" name="s_dormitoryid" id="s_dormitoryid">
 
             <input class="layui-input" type="hidden" name="pageIndex" value="1">
             <input class="layui-input" type="hidden" name="pageSize" value="3">
@@ -68,37 +68,37 @@
         <div class="layui-col-md10">
             <form class="layui-form" id="addEmployeeForm">
                 <div class="layui-form-item">
-                    <label class="layui-form-label">学号：</label>
+                    <label class="layui-form-label">编号：</label>
                     <div class="layui-input-block">
-                        <input type="text" lay-verify="required" name="s_studentid"   class="layui-input" placeholder="请输入学号">
+                        <input type="text" lay-verify="required" name="s_studentid"   class="layui-input" placeholder="请输入编号">
                     </div>
                 </div>
 
                 <div class="layui-form-item">
-                    <label class="layui-form-label">姓名：</label>
+                    <label class="layui-form-label">小猪昵称：</label>
                     <div class="layui-input-block">
-                        <input type="text" lay-verify="required" name="s_name"  class="layui-input" placeholder="请输入姓名">
+                        <input type="text" lay-verify="required" name="s_name"  class="layui-input" placeholder="请输入小猪昵称">
                     </div>
                 </div>
 
                 <div class="layui-form-item">
-                    <label class="layui-form-label">学生卫生：</label>
+                    <label class="layui-form-label">卫生情况：</label>
                     <div class="layui-input-block">
                         <input type="text" name="s_grade" class="layui-input" placeholder="请输入卫生打分">
                     </div>
                 </div>
 
                 <div class="layui-form-item">
-                    <label class="layui-form-label">班级编号：</label>
+                    <label class="layui-form-label">猪笼编号：</label>
                     <div class="layui-input-block">
-                        <input type="text" name="s_classid" class="layui-input" placeholder="请输入班级编号">
+                        <input type="text" name="s_classid" class="layui-input" placeholder="请输入猪笼编号">
                     </div>
                 </div>
 
                 <div class="layui-form-item">
-                    <label class="layui-form-label">寝室编号：</label>
+                    <label class="layui-form-label">猪圈编号：</label>
                     <div class="layui-input-block">
-                        <input type="text" name="s_dormitoryid"  class="layui-input" placeholder="请输入寝室编号">
+                        <input type="text" name="s_dormitoryid"  class="layui-input" placeholder="请输入猪圈编号">
                     </div>
                 </div>
 
@@ -118,11 +118,11 @@
         <thead>
         <tr>
             <th>ID</th>
-            <th>学号</th>
-            <th>姓名</th>
-            <th>学生卫生</th>
-            <th>班级编号</th>
-            <th>宿舍编号</th>
+            <th>编号</th>
+            <th>小猪昵称</th>
+            <th>卫生情况</th>
+            <th>猪笼编号</th>
+            <th>猪舍编号</th>
             <th>创建日期</th>
             <th>更新日期</th>
             <th>操作</th>
@@ -201,7 +201,7 @@
                         ]);
 
                         // 2. 数组头部新增表头
-                        dt.unshift({g_id: 'ID', s_studentid: '学号', s_name: '姓名', s_grade: '学生卫生', s_classid: '班级编号', s_dormitoryid: '宿舍编号', create_time: '创建日期', update_time: '更新日期'});
+                        dt.unshift({g_id: 'ID', s_studentid: '编号', s_name: '小猪昵称', s_grade: '卫生情况', s_classid: '猪笼编号', s_dormitoryid: '猪舍编号', create_time: '创建日期', update_time: '更新日期'});
 
                         // 意思是：A列40px，B列60px(默认)，C列120px，D、E、F等均未定义
                         var colConf = excel.makeColConfig({
@@ -214,7 +214,7 @@
                         // 3. 执行导出函数，系统会弹出弹框
                         excel.exportExcel({
                             sheet1: dt
-                        }, '学生卫生数据.xlsx', 'xlsx', {
+                        }, '卫生情况数据.xlsx', 'xlsx', {
                             extend: {
                                 '!cols': colConf
                             }
@@ -237,7 +237,7 @@
             $("#addStudnetBtn").click(function () {
                 layer.open({
                     type:1,
-                    title:"添加班级",
+                    title:"添加猪笼",
                     skin:"myclass",
                     area:["50%"],
                     anim:2,

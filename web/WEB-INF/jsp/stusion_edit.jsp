@@ -28,7 +28,7 @@
 
         <div class="layui-form-item">
             <label for="ss_name" class="layui-form-label">
-                <span class="f_sp">姓名</span>
+                <span class="f_sp">小猪昵称</span>
             </label>
             <div class="layui-input-inline">
                 <input type="text" id="ss_name" name="s_name"
