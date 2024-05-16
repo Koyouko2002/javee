@@ -206,6 +206,15 @@
                         </a>
                     </li >
                 </ul>
+                <ul class="sub-menu">
+                    <li>
+                        <a _href="/findVisitorTea">
+                            <%--点击在右侧出现动态的Tab--%>
+                            <i class="iconfont">&#xe6a7;</i>
+                            <cite>顾客列表</cite>
+                        </a>
+                    </li >
+                </ul>
             </li>
 
             <li>
